@@ -116,8 +116,7 @@ vector<int> Agent::getAvailableParties(Simulation &sim){
         const Party & p = g.getParty(pId);
         if(p.getState() != Joined)
         {
-            const vector<int>& offers = p.getOfferList(); //// pointer ? 
-            //if(std::find(offers.begin(),offers.end(),coalition) != offers.end()){}
+            const vector<int>& offers = p.getOfferList(); 
             bool avail = true;
             for(int currCoal : offers) // checking if someone from the agent's coalition already offered
             {
